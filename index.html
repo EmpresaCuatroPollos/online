@@ -9,6 +9,134 @@
 <link rel="stylesheet" href="style.css">
 <body>
     <header>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+list-style: none;
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fefefe;
+}
+
+header{
+    width: 100%;
+    height:100px;
+    background: #11101b;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+
+.logo{
+    align-items:center;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(255, 251, 251);
+text-transform: uppercase;
+display: flex;
+}
+
+
+.hamburger{
+    display: none;
+}
+
+
+.nav-bar ul  {
+    display:flex;
+}
+
+
+.nav-bar ul li a{
+    display: flex;
+    color: #fefefe;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+    letter-spacing: 2px;
+}
+
+.nav-bar ul li a:hover{
+    color: #11101b;
+    background: #fefefe;
+}
+
+.nav-bar ul li a.active{
+ color: #11101b;
+ background: #fefefe;
+}
+
+@media only screen and (max-width:1320px){
+    header{
+        padding: 0 50px;
+    }
+}
+@media only screen and (max-width:1100px){
+    header{
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width:900px){
+    .hamburger{
+       display: block;
+       cursor: pointer;
+    }
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+    .nav-bar.active{
+        height: 400px;
+    }
+    .nav-bar{
+       height: 0px;
+        position: absolute;
+       top: 80px;
+       left: 0;
+       right: 0;
+       width: 100vw;
+       background: #11101b;
+       transition: 0.2s;
+       overflow: hidden;
+       justify-content: space-between;
+    display: flex;
+    }
+
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+        color: rgb(253, 253, 253);
+    }
+}
+
+
+.nav-bar.active ul{
+    opacity:1;
+}
+
+
+    </style>
         <div class="logo"> <img src="navbar/logo-removebg-preview.png" width="80px">Empresa cuatro pollos</div> 
               <div class="hamburger">
                  <div class="line"></div>
@@ -188,18 +316,18 @@
                 <br>
                 <div class="row2">
                    <div class="col2">
-                    <img src="partidos/granja el paraiso 2.jpg">
+                    <img src="granja el paraiso 2.jpg">
                     <h1>Granja El Paraíso 2</h1>
                    </div> 
-                    <div class="col2"><img src="partidos/dandy game fowl.jpg">
+                    <div class="col2"><img src="dandy game fowl.jpg">
                         <h1>Dandy Game Fowl</h1>
                         </div>
                             <div class="col2">
-                                <img src="partidos/dandy game fowl 2 y 3.jpg " >
+                                <img src="dandy game fowl 2 y 3.jpg " >
                                 <h1>Dandy Game Fowl 2 y 3</h1>
                             </div>
                             <div class="col2">
-                                <img src="partidos/granja el limón.jpg">
+                                <img src="granja el limón.jpg">
                                 <h1>Granja El Limón</h1>
                             </div>
                         </div>
@@ -208,19 +336,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/rancho la cañada 1.jpg">
+                        <img src="rancho la cañada 1.jpg">
                         <h1>Rancho La Cañada 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/rancho la cañada 2.jpg">
+                        <img src="rancho la cañada 2.jpg">
                         <h1>Rancho La Cañada 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/rancho la cañada 3.jpg">
+                        <img src="rancho la cañada 3.jpg">
                         <h1>Rancho La Cañada 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granka max.jpg">
+                        <img src="granka max.jpg">
                         <h1>Granja Max </h1>
                     </div>
                 </div>
@@ -230,19 +358,19 @@
 
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/la canoita.jpg">
+                        <img src="la canoita.jpg">
                         <h1>La Canoita</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/Privada y Herradura y Quinta Gomary.jpg">
+                        <img src="Privada y Herradura y Quinta Gomary.jpg">
                         <h1>La Herradura y Quinta Gomary</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/El Cerro 1 y 2.jpg" >
+                        <img src="El Cerro 1 y 2.jpg" >
                         <h1>El Cerro 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/Granja Guillén.jpg">
+                        <img src="Granja Guillén.jpg">
                         <h1>Granja Guillén</h1>
                     </div>
                 </div>
@@ -251,19 +379,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/el aguilillo.jpg">
+                        <img src="el aguilillo.jpg">
                         <h1>El Agulillo</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/pueblo viejo.jpg">
+                        <img src="pueblo viejo.jpg">
                         <h1>Pueblo Viejo</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/canelillo.jpg">
+                        <img src="canelillo.jpg">
                         <h1>Canelillo</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/don gilberto.jpg" >
+                        <img src="don gilberto.jpg" >
                         <h1>Don Gilberto</h1>
                     </div>
                 </div>
@@ -272,19 +400,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/aramutaro.jpg">
+                        <img src="aramutaro.jpg">
                         <h1>Aramútaro</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la empastada.jpg">
+                        <img src="la empastada.jpg">
                         <h1>Buenavista 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el cedrito 3.jpg">
+                        <img src="el cedrito 3.jpg">
                         <h1>El Cedrito 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la empastada.jpg" >
+                        <img src="la empastada.jpg" >
                         <h1>La Empastada</h1>
                     </div>
                 </div>
@@ -293,19 +421,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/el triangulo 1 y 2.jpg">
+                        <img src="el triangulo 1 y 2.jpg">
                         <h1>El Triángulo 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/tony carriedo.jpg">
+                        <img src="tony carriedo.jpg">
                         <h1>Tony Carriedo</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/luisito.jpg">
+                        <img src="luisito.jpg">
                         <h1>Luisito</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/barbas game farm.jpg">
+                        <img src="barbas game farm.jpg">
                         <h1>Barbas Game Farm</h1>
                     </div>
                 </div>
@@ -314,19 +442,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/san mateo y vista hermosa 1.jpg">
+                        <img src="san mateo y vista hermosa 1.jpg">
                         <h1>San Mateo y Vista Hermosa 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/san mateo y vista hermosa 2.jpg">
+                        <img src="san mateo y vista hermosa 2.jpg">
                         <h1>San Mateo y Vista Hermosa 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/hacienda serrano 1.jpg">
+                        <img src="hacienda serrano 1.jpg">
                         <h1>Hacienda Serrano 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/hacienda serrano 2.jpg" >
+                        <img src="hacienda serrano 2.jpg" >
                         <h1>Hacienda Serrano 2</h1>
                     </div>
                 </div>
@@ -335,19 +463,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/forrajera garcia 1 y 2.jpg">
+                        <img src="forrajera garcia 1 y 2.jpg">
                         <h1>Forrajera García 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/forrajera 3.jpg">
+                        <img src="forrajera 3.jpg">
                         <h1>Forrajera García 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/forrajera garcia 4.jpg">
+                        <img src="forrajera garcia 4.jpg">
                         <h1>Forrajera García 4</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el halcon.jpg">
+                        <img src="el halcon.jpg">
                         <h1>El Halcón</h1>
                     </div>
                 </div>
@@ -356,19 +484,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/nuevo urecho 1.jpg">
+                        <img src="nuevo urecho 1.jpg">
                         <h1>Nuevo Urecho 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/nuevo urecho 2.jpg">
+                        <img src="nuevo urecho 2.jpg">
                         <h1>Nuevo Urecho 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/nuevo urecho 3.jpg">
+                        <img src="nuevo urecho 3.jpg">
                         <h1>Nuevo Urecho 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/nuevo urecho 4.jpg">
+                        <img src="nuevo urecho 4.jpg">
                         <h1>Nuevo Urecho 4</h1>
                     </div>
                 </div>
@@ -377,19 +505,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/nuevo urecho 5.jpg">
+                        <img src="nuevo urecho 5.jpg">
                         <h1>Nuevo Urecho 5</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/las piñas 1.jpg">
+                        <img src="las piñas 1.jpg">
                         <h1>Las Piñas 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/las piñas 2.jpg">
+                        <img src="las piñas 2.jpg">
                         <h1>Las Piñas 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/las piñas 3.jpg">
+                        <img src="las piñas 3.jpg">
                         <h1>Las Piñas 3</h1>
                     </div>
                 </div>
@@ -398,19 +526,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/las piñas 4.jpg">
+                        <img src="las piñas 4.jpg">
                         <h1>Las Piñas 4</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/las piñas 5.jpg">
+                        <img src="las piñas 5.jpg">
                         <h1>Las Piñas 5</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/dos hermanos y el calabozo 1 y 2.jpg">
+                        <img src="dos hermanos y el calabozo 1 y 2.jpg">
                         <h1>Dos Hermanos y El Calabozo 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/dos hermanos y el calabozo 3.jpg">
+                        <img src="dos hermanos y el calabozo 3.jpg">
                         <h1>Dos Hermanos y El Calabozo 3</h1>
                     </div>
                 </div>
@@ -419,19 +547,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/dos hermanos y el calabozo 4.jpg">
+                        <img src="dos hermanos y el calabozo 4.jpg">
                         <h1>Dos Hermanos y El Calabozo 4</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/carahuani y quinta mary 1.jpg">
+                        <img src="carahuani y quinta mary 1.jpg">
                         <h1>Carahuani y Quinta Mary 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/carahuani y quinta mary 2.jpg">
+                        <img src="carahuani y quinta mary 2.jpg">
                         <h1>Carahuani y Quinta Mary 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/j.e.jpg">
+                        <img src="j.e.jpg">
                         <h1>J. E</h1>
                     </div>
                 </div>
@@ -440,19 +568,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/huandacareo 1.jpg">
+                        <img src="huandacareo 1.jpg">
                         <h1>Huandacareo 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/huandacareo 2.jpg">
+                        <img src="huandacareo 2.jpg">
                         <h1>Huandacareo 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/huandacareo 3.jpg">
+                        <img src="huandacareo 3.jpg">
                         <h1>Huandacareo 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/panaderia carlitos.jpg">
+                        <img src="panaderia carlitos.jpg">
                         <h1>Panadería Carlitos</h1>
                     </div>
                 </div>
@@ -461,19 +589,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/rancho el cementerio 1.jpg">
+                        <img src="rancho el cementerio 1.jpg">
                         <h1>Rancho El Cementerio 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/rancho el cementerio 2.jpg">
+                        <img src="rancho el cementerio 2.jpg">
                         <h1>Rancho El Cementerio 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/rancho el cementerio 3.jpg">
+                        <img src="rancho el cementerio 3.jpg">
                         <h1>Rancho El Cementerio 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/rancho el cobano.jpg">
+                        <img src="rancho el cobano.jpg">
                         <h1>Rancho El Cobano</h1>
                     </div>
                 </div>
@@ -482,19 +610,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/las puentes 1.jpg">
+                        <img src="las puentes 1.jpg">
                         <h1>Las Puentes 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/las puentes 2.jpg">
+                        <img src="las puentes 2.jpg">
                         <h1>Las Puentes 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/las puentes 3.jpg">
+                        <img src="las puentes 3.jpg">
                         <h1>Las Puentes 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/las puentes 4.jpg">
+                        <img src="las puentes 4.jpg">
                         <h1>Las Puentes 4</h1>
                     </div>
                 </div>
@@ -503,19 +631,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/quinta hernandez 1,2,3 y 4.jpg">
+                        <img src="quinta hernandez 1,2,3 y 4.jpg">
                         <h1>Quinta Hernández 1,2,3 y 4</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la mesa del rincon 1.jpg">
+                        <img src="la mesa del rincon 1.jpg">
                         <h1>La Mesa Del Rincón 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la mesa del rincon 2.jpg">
+                        <img src="la mesa del rincon 2.jpg">
                         <h1>La Mesa Del Rincón 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/caramicuas.jpg">
+                        <img src="caramicuas.jpg">
                         <h1>Carámicuas</h1>
                     </div>
                 </div>
@@ -524,19 +652,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/los cuates 1.jpg">
+                        <img src="los cuates 1.jpg">
                         <h1>Los Cuates 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/los cuates 2.jpg">
+                        <img src="los cuates 2.jpg">
                         <h1>Los Cuates 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/los cuates 3.jpg">
+                        <img src="los cuates 3.jpg">
                         <h1>Los Cuates 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/los cuates 4.jpg">
+                        <img src="los cuates 4.jpg">
                         <h1>Los Cuates 4</h1>
                     </div>
                 </div>
@@ -545,19 +673,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/los cuates 5.jpg">
+                        <img src="los cuates 5.jpg">
                         <h1>Los Cuates 5</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja valentina 1 y 2.jpg">
+                        <img src="granja valentina 1 y 2.jpg">
                         <h1>Granja Valentina 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja valentina 3.jpg">
+                        <img src="granja valentina 3.jpg">
                         <h1>Granja Valentina 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/r.g.jpg">
+                        <img src="r.g.jpg">
                         <h1>R.G</h1>
                     </div>
                 </div>
@@ -566,19 +694,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/curindales y valle verde 1.jpg">
+                        <img src="curindales y valle verde 1.jpg">
                         <h1>Curindales y Granja Valle Verde 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/curindales y valle verde 2.jpg">
+                        <img src="curindales y valle verde 2.jpg">
                         <h1>Curindales y Granja Valle Verde 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/curindales y valle verde 3.jpg">
+                        <img src="curindales y valle verde 3.jpg">
                         <h1>Curindales y Granja Valle Verde 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/curindales y valle verde 4.jpg">
+                        <img src="curindales y valle verde 4.jpg">
                         <h1>Curindales y Granja Valle Verde 4</h1>
                     </div>
                 </div>
@@ -587,22 +715,22 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/curindales y valle verde 5.jpg">
+                        <img src="curindales y valle verde 5.jpg">
                         <h1>Curindales y Granja Valle Verde 5</h1>
                     </div>
                     <br>
                     <br>
                     <br>
                     <div class="col2">
-                        <img src="partidos/puentecillas 1.jpg">
+                        <img src="puentecillas 1.jpg">
                         <h1>Puentecillas y Rancho El Viejón 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/Puentecillas y rancho el viejon 2.jpg">
+                        <img src="Puentecillas y rancho el viejon 2.jpg">
                         <h1>Puentecillas y Rancho El Viejón 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el tecolote.jpg">
+                        <img src="el tecolote.jpg">
                         <h1>El Tecolote</h1>
                     </div>
                 </div>
@@ -611,19 +739,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/la valita 1 y 2.jpg">
+                        <img src="la valita 1 y 2.jpg">
                         <h1>La Valita 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la valita 3.jpg">
+                        <img src="la valita 3.jpg">
                         <h1>La Valita 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la valita 4.jpg">
+                        <img src="la valita 4.jpg">
                         <h1>La Valita 4</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el chaparro.jpg">
+                        <img src="el chaparro.jpg">
                         <h1>El Chaparro</h1>
                     </div>
                 </div>
@@ -632,19 +760,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/rancho el limoncito 1 y 2.jpg">
+                        <img src="rancho el limoncito 1 y 2.jpg">
                         <h1>Rancho El Limoncito 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/rancho el limoncito 4.jpg">
+                        <img src="rancho el limoncito 4.jpg">
                         <h1>Rancho El Limoncito 4</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la joya de los coyotes.jpg">
+                        <img src="la joya de los coyotes.jpg">
                         <h1>La Joya De Los Coyotes</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/gera.jpg">
+                        <img src="gera.jpg">
                         <h1>Gera</h1>
                     </div>
                 </div>
@@ -653,19 +781,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/el encinal 2.jpg">
+                        <img src="el encinal 2.jpg">
                         <h1>El Encinal 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el encinal 3.jpg">
+                        <img src="el encinal 3.jpg">
                         <h1>El Encinal 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el encinal 5.jpg">
+                        <img src="el encinal 5.jpg">
                         <h1>El Encinal 5</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el cerrito.jpg">
+                        <img src="el cerrito.jpg">
                         <h1>El Cerrito</h1>
                     </div>
                 </div>
@@ -674,19 +802,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/rancho gaona y pacotorro 1.jpg">
+                        <img src="rancho gaona y pacotorro 1.jpg">
                         <h1>Rancho Gaona y Pacotorro 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/pacotorro.jpg">
+                        <img src="pacotorro.jpg">
                         <h1>Pacotorro</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la laja.jpg">
+                        <img src="la laja.jpg">
                         <h1>La Laja</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el mirador 1.jpg">
+                        <img src="el mirador 1.jpg">
                         <h1>El Mirador 1</h1>
                     </div>
                     
@@ -696,19 +824,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/tavera 1 y 2.jpg">
+                        <img src="tavera 1 y 2.jpg">
                         <h1>Tavera 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/tavera 3.jpg">
+                        <img src="tavera 3.jpg">
                         <h1>Tavera 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/tavera 4.jpg">
+                        <img src="tavera 4.jpg">
                         <h1>Tavera 4</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/santa monica.jpg">
+                        <img src="santa monica.jpg">
                         <h1>Santa Mónica</h1>
                     </div>
                 </div>
@@ -717,19 +845,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/granja keyla.jpg">
+                        <img src="granja keyla.jpg">
                         <h1>Granja Keyla 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja el rincon.jpg">
+                        <img src="granja el rincon.jpg">
                         <h1>Granja El Rincón</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el mejoral.jpg">
+                        <img src="el mejoral.jpg">
                         <h1>El Mejoral</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/los atrevidos 1.jpg">
+                        <img src="los atrevidos 1.jpg">
                         <h1>Los Atrevidos 1</h1>
                     </div>
                 </div>
@@ -738,19 +866,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/el kike y aristeo 1.jpg">
+                        <img src="el kike y aristeo 1.jpg">
                         <h1>El Kike y Aristeo 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el capote 1,2,3,4 y 5.jpg">
+                        <img src="el capote 1,2,3,4 y 5.jpg">
                         <h1>El Capote 1,2,3,4 y 5</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la joya del tepamal 1.jpg">
+                        <img src="la joya del tepamal 1.jpg">
                         <h1>La Joya Del Tepamal 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la joya del tepamal 2.jpg">
+                        <img src="la joya del tepamal 2.jpg">
                         <h1>La Joya Del Tepamal 2</h1>
                     </div>
                 </div>
@@ -759,19 +887,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/granja kim.jpg">
+                        <img src="granja kim.jpg">
                         <h1>Granja Kim</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja alvarez 1.jpg">
+                        <img src="granja alvarez 1.jpg">
                         <h1>Granja Álvarez 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja alvarez 2.jpg">
+                        <img src="granja alvarez 2.jpg">
                         <h1>Granja Álverez 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el barril 1 y 2.jpg">
+                        <img src="el barril 1 y 2.jpg">
                         <h1>El Barril 1 y 2</h1>
                     </div>
                 </div>
@@ -780,19 +908,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/el barril 5.jpg">
+                        <img src="el barril 5.jpg">
                         <h1>El Barril 5</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/meño ranch 1,2 y3.jpg">
+                        <img src="meño ranch 1,2 y3.jpg">
                         <h1>Meño Ranch 1,2 y 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/dos de oros.jpg">
+                        <img src="dos de oros.jpg">
                         <h1>Dos De Oros</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/los tecos.jpg">
+                        <img src="los tecos.jpg">
                         <h1>Los Tecos</h1>
                     </div>
                 </div>
@@ -801,19 +929,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/la pedorra 1.jpg">
+                        <img src="la pedorra 1.jpg">
                         <h1>La Pedorra 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la nopalera.jpg">
+                        <img src="la nopalera.jpg">
                         <h1>La Nopalera</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el naranjo 1.jpg">
+                        <img src="el naranjo 1.jpg">
                         <h1>El Naranjo 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el naranjo 2,3,4 y 5.jpg">
+                        <img src="el naranjo 2,3,4 y 5.jpg">
                         <h1>El Naranjo 1,2,3,4 y 5</h1>
                     </div>
                 </div>
@@ -822,19 +950,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/el bosque 1.jpg">
+                        <img src="el bosque 1.jpg">
                         <h1>El Bosque 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el bosque 2.jpg">
+                        <img src="el bosque 2.jpg">
                         <h1>El Bosque 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el bosque 3.jpg">
+                        <img src="el bosque 3.jpg">
                         <h1>El Bosque 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el bosque 4 y 5.jpg">
+                        <img src="el bosque 4 y 5.jpg">
                         <h1>El Bosque 4 y 5</h1>
                     </div>
                 </div>
@@ -843,19 +971,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/el tucan 1 y 2.jpg">
+                        <img src="el tucan 1 y 2.jpg">
                         <h1>El Tucán 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja maryfer.jpg">
+                        <img src="granja maryfer.jpg">
                         <h1>Granja Maryfer</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/criadero san pablo.jpg">
+                        <img src="criadero san pablo.jpg">
                         <h1>Criadero San Pablo</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja la olvidada 1 y 2.jpg">
+                        <img src="granja la olvidada 1 y 2.jpg">
                         <h1>Granja La Olvidada 1 y 2</h1>
                     </div>
                 </div>
@@ -864,19 +992,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/la chuparrosa 1.jpg">
+                        <img src="la chuparrosa 1.jpg">
                         <h1>La Chuparrosa 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la chuparrosa 2.jpg">
+                        <img src="la chuparrosa 2.jpg">
                         <h1>La Chuparrosa 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/quinta delia y la chuparrosa 1 y 2.jpg">
+                        <img src="quinta delia y la chuparrosa 1 y 2.jpg">
                         <h1>Quinta Delia y La Chuparrosa 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/potrerillos.jpg">
+                        <img src="potrerillos.jpg">
                         <h1>Potrerillos</h1>
                     </div>
                 </div>
@@ -885,19 +1013,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/el suspiro 1 y 2.jpg">
+                        <img src="el suspiro 1 y 2.jpg">
                         <h1>El Suspiro 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el cedrito 1.jpg">
+                        <img src="el cedrito 1.jpg">
                         <h1>El Cedrito 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el cedrito 2.jpg">
+                        <img src="el cedrito 2.jpg">
                         <h1>El Cedrito 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el cedrito 3.jpg">
+                        <img src="el cedrito 3.jpg">
                         <h1>El Cedrito 3</h1>
                     </div>
                 </div>
@@ -906,19 +1034,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/el tarascon y shomuy 1,2 y3.jpg">
+                        <img src="el tarascon y shomuy 1,2 y3.jpg">
                         <h1>El Tarascón y Shomuy 1,2 y 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/chaparral y panchito 1.jpg">
+                        <img src="chaparral y panchito 1.jpg">
                         <h1>Chaparral y Panchito 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/chaparral y panchito 2.jpg">
+                        <img src="chaparral y panchito 2.jpg">
                         <h1>Chaparral y Panchito 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/hermanos becerril.jpg">
+                        <img src="hermanos becerril.jpg">
                         <h1>Hermanos Becerril</h1>
                     </div>
                 </div>
@@ -927,19 +1055,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/la soledad 1.jpg">
+                        <img src="la soledad 1.jpg">
                         <h1>La Soledad 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la soledad 2.jpg">
+                        <img src="la soledad 2.jpg">
                         <h1>La Soledad 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la soledad 3.jpg">
+                        <img src="la soledad 3.jpg">
                         <h1>La Soledad 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el chacho.jpg">
+                        <img src="el chacho.jpg">
                         <h1>El Chacho</h1>
                     </div>
                 </div>
@@ -948,19 +1076,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/san isidro 1.jpg">
+                        <img src="san isidro 1.jpg">
                         <h1>San Isisdro 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/san isidro 2.jpg">
+                        <img src="san isidro 2.jpg">
                         <h1>San Isidro 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/san isidro 3.jpg">
+                        <img src="san isidro 3.jpg">
                         <h1>San Isidro 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/hermanos villegas.jpg">
+                        <img src="hermanos villegas.jpg">
                         <h1>Hermanos Villegas</h1>
                     </div>
                 </div>
@@ -969,19 +1097,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/san antonio 1,2 y3.jpg">
+                        <img src="san antonio 1,2 y3.jpg">
                         <h1>San Antonio 1,2 y 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/Privada y Herradura y Quinta Gomary 1.jpg">
+                        <img src="Privada y Herradura y Quinta Gomary 1.jpg">
                         <h1>Privada y Herradura y Quinta Gomary 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/Privada y Herradura y Quinta Gomary 2 y 3.jpg">
+                        <img src="Privada y Herradura y Quinta Gomary 2 y 3.jpg">
                         <h1>Privada y Herradura y Quinta Gomary 2 y 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja hermanos murillo.jpg">
+                        <img src="granja hermanos murillo.jpg">
                         <h1>Granja Hermanos Murillo</h1>
                     </div>
                 </div>
@@ -990,19 +1118,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/la charanda 1 y 2.jpg">
+                        <img src="la charanda 1 y 2.jpg">
                         <h1>La Charanda 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja el plan 1.jpg">
+                        <img src="granja el plan 1.jpg">
                         <h1>Granja El Plan 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja el plan 2.jpg">
+                        <img src="granja el plan 2.jpg">
                         <h1>Granja El Plan 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la michoacana.jpg">
+                        <img src="la michoacana.jpg">
                         <h1>La Michoacana</h1>
                     </div>
                 </div>
@@ -1011,19 +1139,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/la cabaña 1.jpg">
+                        <img src="la cabaña 1.jpg">
                         <h1>La Cabaña 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la cabaña 2.jpg">
+                        <img src="la cabaña 2.jpg">
                         <h1>La Cabaña 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la cabaña 3 y 4.jpg">
+                        <img src="la cabaña 3 y 4.jpg">
                         <h1>La Cabaña 3 y 4</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/los compadres.jpg">
+                        <img src="los compadres.jpg">
                         <h1>Los Compadres</h1>
                     </div>
                 </div>
@@ -1032,19 +1160,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/la blanca 1,2 y 3.jpg">
+                        <img src="la blanca 1,2 y 3.jpg">
                         <h1>La Blanca 1,2 y 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/los coyotes 1.jpg">
+                        <img src="los coyotes 1.jpg">
                         <h1>Los Coyotes 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/victor y el wero 1.jpg">
+                        <img src="victor y el wero 1.jpg">
                         <h1>Victor y El Wero 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/victor y el wero 2.jpg">
+                        <img src="victor y el wero 2.jpg">
                         <h1>Victor y El Wero 2</h1>
                     </div>
                 </div>
@@ -1053,19 +1181,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/rucurru.jpg">
+                        <img src="rucurru.jpg">
                         <h1>Rucurru</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/bolillos 1.jpg">
+                        <img src="bolillos 1.jpg">
                         <h1>Bolillos 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/bolillos 2.jpg">
+                        <img src="bolillos 2.jpg">
                         <h1>Bolillos 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/bolillos 3.jpg">
+                        <img src="bolillos 3.jpg">
                         <h1>Bolillos 3</h1>
                     </div>
                 </div>
@@ -1074,19 +1202,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/morales y el herrero 1.jpg">
+                        <img src="morales y el herrero 1.jpg">
                         <h1>Morales y El Herrero 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/morales y el herrero 2.jpg">
+                        <img src="morales y el herrero 2.jpg">
                         <h1>Morales y El Herrero 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/tremendos farm y el fonta 1 y 2.jpg">
+                        <img src="tremendos farm y el fonta 1 y 2.jpg">
                         <h1>Tremendos Farm y El Fonta 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la sierra y cataleya y la yesca 1 y 2.jpg">
+                        <img src="la sierra y cataleya y la yesca 1 y 2.jpg">
                         <h1>La Sierra y Cataleya y La Yesca 1 y 2</h1>
                     </div>
                 </div>
@@ -1095,19 +1223,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/la sierra y cataleya y la yesca 3 y 4.jpg">
+                        <img src="la sierra y cataleya y la yesca 3 y 4.jpg">
                         <h1>La Sierra y Cataleya y La Yesca 3 y 4</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/san juditas y los amigos 1 y 2.jpg">
+                        <img src="san juditas y los amigos 1 y 2.jpg">
                         <h1>San Juditas y Los Amigos 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/nato villa y la parota.jpg">
+                        <img src="nato villa y la parota.jpg">
                         <h1>Nato Villa y La Parota</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/paso seco.jpg">
+                        <img src="paso seco.jpg">
                         <h1>Paso Seco</h1>
                     </div>
                 </div>
@@ -1116,19 +1244,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/arechiga 1.jpg">
+                        <img src="arechiga 1.jpg">
                         <h1>Arechiga 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/arechiga 2.jpg">
+                        <img src="arechiga 2.jpg">
                         <h1>Arechiga 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/arechiga 3.jpg">
+                        <img src="arechiga 3.jpg">
                         <h1>Arechiga 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el paso 1 y 2.jpg">
+                        <img src="el paso 1 y 2.jpg">
                         <h1>El Paso 1 y 2</h1>
                     </div>
                 </div>
@@ -1137,19 +1265,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/granja tabachines y viña 1.jpg">
+                        <img src="granja tabachines y viña 1.jpg">
                         <h1>Granja Tabachines y Viña 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja tabachines y viña 2.jpg">
+                        <img src="granja tabachines y viña 2.jpg">
                         <h1>Granja Tabachines y Viña 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja tabachines y viña 3.jpg">
+                        <img src="granja tabachines y viña 3.jpg">
                         <h1>Granja Tabachines y Viña 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja tabachines y viña 4.jpg">
+                        <img src="granja tabachines y viña 4.jpg">
                         <h1>Granja Tabachines y Viña 4</h1>
                     </div>
                 </div>
@@ -1158,19 +1286,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/granja tabachines y viña 5.jpg">
+                        <img src="granja tabachines y viña 5.jpg">
                         <h1>Granja Tabachines y Viña 5</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/los dos plebes.jpg">
+                        <img src="los dos plebes.jpg">
                         <h1>Los Dos Plebes</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/buenavista 1.jpg">
+                        <img src="buenavista 1.jpg">
                         <h1>Buenavista 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/buenavista 2.jpg">
+                        <img src="buenavista 2.jpg">
                         <h1>Buenavista 2</h1>
                     </div>
                 </div>
@@ -1179,19 +1307,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/buenavista 3.jpg">
+                        <img src="buenavista 3.jpg">
                         <h1>Buenavista 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la azotea y el renacido.jpg">
+                        <img src="la azotea y el renacido.jpg">
                         <h1>La Azotea y El Renacido</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el piloto y monarca farm 1,2 y 3.jpg">
+                        <img src="el piloto y monarca farm 1,2 y 3.jpg">
                         <h1>El Piloto y Monarca Farm 1,2 y 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/san judas caracuaro.jpg">
+                        <img src="san judas caracuaro.jpg">
                         <h1>San Judas</h1>
                     </div>
                 </div>
@@ -1200,19 +1328,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/el coyote.jpg">
+                        <img src="el coyote.jpg">
                         <h1>El Coyote</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/san antonio 1,2 y3.jpg">
+                        <img src="san antonio 1,2 y3.jpg">
                         <h1>San Antonio 1,2 y 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la hacienda 1 y 2.jpg">
+                        <img src="la hacienda 1 y 2.jpg">
                         <h1>La Hacienda 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la hacienda 3 y 4.jpg">
+                        <img src="la hacienda 3 y 4.jpg">
                         <h1>La Hacienda 3 y 4</h1>
                     </div>
                 </div>
@@ -1221,19 +1349,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/el jueves.jpg">
+                        <img src="el jueves.jpg">
                         <h1>El Jueves</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el milagro 1.jpg">
+                        <img src="el milagro 1.jpg">
                         <h1>El Milagro 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el milagro 2.jpg">
+                        <img src="el milagro 2.jpg">
                         <h1>El Milagro 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el milagro 3.jpg">
+                        <img src="el milagro 3.jpg">
                         <h1>El Milagro 3</h1>
                     </div>
                 </div>
@@ -1242,19 +1370,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/toyonguio 1.jpg">
+                        <img src="toyonguio 1.jpg">
                         <h1>Toyonguio 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/toyonguio 2 y 3.jpg">
+                        <img src="toyonguio 2 y 3.jpg">
                         <h1>Toyonguio 2 y 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/toyonguio 4.jpg">
+                        <img src="toyonguio 4.jpg">
                         <h1>Toyonguio 4</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/camembaro 1.jpg">
+                        <img src="camembaro 1.jpg">
                         <h1>Camémbaro 1</h1>
                     </div>
                 </div>
@@ -1263,19 +1391,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/camembaro 2.jpg">
+                        <img src="camembaro 2.jpg">
                         <h1>Camémbaro 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/veterinaria zarco 1 y 2.jpg">
+                        <img src="veterinaria zarco 1 y 2.jpg">
                         <h1>Veterinaria Zarco 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/julio vargas.jpg">
+                        <img src="julio vargas.jpg">
                         <h1>Julio Vargas</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la retama.jpg">
+                        <img src="la retama.jpg">
                         <h1>La Retama</h1>
                     </div>
                 </div>
@@ -1284,19 +1412,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/la loma 1 y 2.jpg">
+                        <img src="la loma 1 y 2.jpg">
                         <h1>La Loma 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la loma 3.jpg">
+                        <img src="la loma 3.jpg">
                         <h1>La Loma 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/los fresnos.jpg">
+                        <img src="los fresnos.jpg">
                         <h1>Los Fresnos</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/tres potrillos.jpg">
+                        <img src="tres potrillos.jpg">
                         <h1>Tres Potrillos</h1>
                     </div>
                 </div>
@@ -1305,19 +1433,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/el colorin 1.jpg">
+                        <img src="el colorin 1.jpg">
                         <h1>El Colorín 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/santas marias.jpg">
+                        <img src="santas marias.jpg">
                         <h1>Santas Marías</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la finca 1.jpg">
+                        <img src="la finca 1.jpg">
                         <h1>La Finca 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la finca 2.jpg">
+                        <img src="la finca 2.jpg">
                         <h1>La Finca 2</h1>
                     </div>
                 </div>
@@ -1326,19 +1454,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/carrizalillo.jpg">
+                        <img src="carrizalillo.jpg">
                         <h1>Carrizalillo</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el testerazo 1 y 2.jpg">
+                        <img src="el testerazo 1 y 2.jpg">
                         <h1>El Testerazo 1 y 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/el testerazo 3.jpg">
+                        <img src="el testerazo 3.jpg">
                         <h1>El Testerazo 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja el rincon de viña.jpg">
+                        <img src="granja el rincon de viña.jpg">
                         <h1>Granja El Rincón De Viña</h1>
                     </div>
                 </div>
@@ -1347,19 +1475,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/el jazmin.jpg">
+                        <img src="el jazmin.jpg">
                         <h1>El Jazmín</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/charcos 1.jpg">
+                        <img src="charcos 1.jpg">
                         <h1>Charcos 1</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/charcos 2.jpg">
+                        <img src="charcos 2.jpg">
                         <h1>Charcos 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/bugambilias 1.jpg">
+                        <img src="bugambilias 1.jpg">
                         <h1>Bugambilias 1</h1>
                     </div>
                 </div>
@@ -1368,19 +1496,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/bugambilias 2.jpg">
+                        <img src="bugambilias 2.jpg">
                         <h1>Bugambilias 2</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/bugambilias y castillo 3.jpg">
+                        <img src="bugambilias y castillo 3.jpg">
                         <h1>Bugambilias y Castillo 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/granja edna 3.jpg">
+                        <img src="granja edna 3.jpg">
                         <h1>Granja Edna 3</h1>
                     </div>
                     <div class="col2">
-                        <img src="partidos/la pinguinera.jpg">
+                        <img src="la pinguinera.jpg">
                         <h1>La Pingüinera</h1>
                     </div>
                 </div>
@@ -1389,19 +1517,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                     <img src="partidos/quinta karol 1 y 2.jpg"> 
+                     <img src="quinta karol 1 y 2.jpg"> 
                       <h1>Quinta Karol 1 y 2</h1>  
                     </div>
                     <div class="col2">
-                        <img src="partidos/las jacarandas 1.jpg"> 
+                        <img src="las jacarandas 1.jpg"> 
                          <h1>Las Jacarandas 1</h1>  
                        </div>
                        <div class="col2">
-                        <img src="partidos/las jacarandas 2.jpg"> 
+                        <img src="las jacarandas 2.jpg"> 
                          <h1>Las Jacarandas 2</h1>  
                        </div>
                        <div class="col2">
-                        <img src="partidos/granja la amistad.jpg"> 
+                        <img src="granja la amistad.jpg"> 
                          <h1>Granja La Amistad y Los Matacanes 1</h1>  
                        </div>
                 </div>
@@ -1410,19 +1538,19 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/granja la amistad 2.jpg"> 
+                        <img src="granja la amistad 2.jpg"> 
                          <h1>Granja La Amistad y Los Matacanes 2</h1>  
                        </div>
                        <div class="col2">
-                        <img src="partidos/moroleon.jpg"> 
+                        <img src="moroleon.jpg"> 
                          <h1>Moroleón</h1>  
                        </div>
                        <div class="col2">
-                        <img src="partidos/monte santa maria 1.jpg"> 
+                        <img src="monte santa maria 1.jpg"> 
                          <h1>Monte Santa María 1</h1>  
                        </div>
                        <div class="col2">
-                        <img src="partidos/monte santa maria 2.jpg"> 
+                        <img src="monte santa maria 2.jpg"> 
                          <h1>Monte Santa María 2</h1>  
                        </div>
                 </div>
@@ -1431,15 +1559,15 @@
                 <br>
                 <div class="row2">
                     <div class="col2">
-                        <img src="partidos/granja nueva y maleo 1 y 2.jpg"> 
+                        <img src="granja nueva y maleo 1 y 2.jpg"> 
                          <h1>Granja Nueva y Maleo 1 y 2</h1>  
                        </div>
                        <div class="col2">
-                        <img src="partidos/loma linda 1.jpg"> 
+                        <img src="loma linda 1.jpg"> 
                          <h1>Loma Linda 1</h1>  
                        </div>
                        <div class="col2">
-                        <img src="partidos/loma linda 2.jpg"> 
+                        <img src="loma linda 2.jpg"> 
                          <h1>Loma Linda 2</h1>  
                        </div>
                 </div>
